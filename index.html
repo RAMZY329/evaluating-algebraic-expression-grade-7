@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algebraic Expression Evaluator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Evaluate Algebraic Expressions</h1>
+
+        <label for="level">Select Difficulty Level:</label>
+        <select id="level" onchange="generateQuestion()">
+            <option value="1">Level 1</option>
+            <option value="2">Level 2</option>
+            <option value="3">Level 3</option>
+            <option value="4">Level 4</option>
+            <option value="5">Level 5</option>
+            <option value="6">Level 6</option>
+            <option value="7">Level 7 (Two Variables)</option>
+        </select>
+
+        <p id="question">Loading...</p>
+        <input type="number" id="answer" placeholder="Enter your answer">
+        <button onclick="checkAnswer()">Submit</button>
+        <button onclick="showSimilarProblem()">Show Similar Problem</button>
+        <p id="feedback"></p>
+        <h2>Score: <span id="score">0</span></h2>
+
+        <div id="solution-box">
+            <h3>Step-by-Step Solution</h3>
+            <p id="similar-problem"></p>
+            <p id="solution-steps"></p>
+            <p id="final-answer"></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
